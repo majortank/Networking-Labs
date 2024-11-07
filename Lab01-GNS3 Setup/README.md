@@ -72,15 +72,15 @@ GNS3 (Graphical Network Simulator-3) is a powerful network emulation tool that a
 
 1. Create new blank project
 
-    ![new_blank_project](screenshots/new_blank_project.jpg)
+    ![new_blank_project](screenshots/lab01/new_blank_project.jpg)
 3. Add components:
 
-    ![Add_Components](screenshots/Add_Components.jpg)
+    ![Add_Components](screenshots/lab01/Add_Components.jpg)
     - 2 Virtual PCs (VPCS)
     - 1 MikroTik router
 4. Connect devices according to diagram:
 
-   ![Connect_devices_according_to_diagram](screenshots/Connect_devices_according_to_diagram.jpg)
+   ![Connect_devices_according_to_diagram](screenshots/lab01/Connect_devices_according_to_diagram.jpg)
     - PC1 ↔ Router (Ether1)
     - PC2 ↔ Router (Ether2)
 
@@ -89,7 +89,7 @@ GNS3 (Graphical Network Simulator-3) is a powerful network emulation tool that a
 
 ### Router Setup:
 
-![Router_Setup](screenshots/Router_Setup.jpg)
+![Router_Setup](screenshots/lab01/Router_Setup.jpg)
 ```bash
 Login: admin (no password)
 > ip address add address=10.11.12.254/24 interface=ether1
@@ -100,7 +100,7 @@ Login: admin (no password)
 
 ### PC1 Setup:
 
-![PC1 Setup](screenshots/PC1_Setup.jpg)
+![PC1 Setup](screenshots/lab01/PC1_Setup.jpg)
 ```bash
 PC1> ip 10.11.12.1/24 10.11.12.254
 PC1> save
@@ -109,7 +109,7 @@ PC1> save
 
 ### PC2 Setup:
 
-![PC2 Setup](screenshots/PC2_Setup.jpg)
+![PC2 Setup](screenshots/lab01/PC2_Setup.jpg)
 ```bash
 PC2> ip 20.30.40.1/24 20.30.40.254
 PC2> save
@@ -118,7 +118,7 @@ PC2> save
 
 ### Testing Connectivity
 
-![Testing_Connectivity](screenshots/Testing_Connectivity.jpg)
+![Testing_Connectivity](screenshots/lab01/Testing_Connectivity.jpg)
 
 From PC1:
 
