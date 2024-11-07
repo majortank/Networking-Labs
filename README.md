@@ -24,18 +24,18 @@ These labs cover fundamental to advanced networking topics, providing hands-on e
 
 | Lab | Topic | Description | Date |
 |-----|-------|-------------|------|
-| 1 | GNS3 Setup | Install and configure GNS3 on your computer and setup your first network topology | Aug 31, 2020 |
-| 2 | Intro to Router OS | Use RouterOS to route between two subnets | Sep 14, 2020 |
-| 3 | Static Routing | Create static routes to inform the router about the location of subnets that are not directly attached | Sep 21, 2020 |
-| 4 | Dynamic Routing | Use dynamic routing protocols to allow the router to automatically learn the location of distant subnets | Sep 28, 2020 |
-| 5 | Custom Subnets | Create your own network subnets given some design constraints | Oct 5, 2020 |
-| 6 | DHCP | Enable Dynamic Host Configuration Protocol (DHCP) on subnets to simplify client network configuration | Oct 12, 2020 |
-| 7 | VLANs | Configure VLANs on the switches and router to provide for network isolation between sets of hosts on the same physical network | Oct 19, 2020 |
-| 8 | Firewalls | Configure a Firewall to restrict network access according to administrative requirements | Oct 26, 2020 |
-| 9 | Network Address Translation | Connect your virtual GNS3 topology to the Internet and configure Network Address Translation (NAT) on a router | Nov 2, 2020 |
-| 10 | GRE and OSPF | Use a GRE tunnel and OSPF routing to connect a "remote" business office to a "headquarters" business network | Nov 9, 2020 |
-| 11 | IPv6 | Configure a dual-stack network to support both IPv4 and IPv6 | Nov 16, 2020 |
-| 12 | OpenFlow | Configure a routed network that uses Software-Defined Networking (SDN) over OpenFlow Layer 3 switches | Nov 30, 2020 |
+| 1 | GNS3 Setup | Install and configure GNS3 on your computer and setup your first network topology |
+| 2 | Intro to Router OS | Use RouterOS to route between two subnets |
+| 3 | Static Routing | Create static routes to inform the router about the location of subnets that are not directly attached |
+| 4 | Dynamic Routing | Use dynamic routing protocols to allow the router to automatically learn the location of distant subnets |
+| 5 | Custom Subnets | Create your own network subnets given some design constraints |
+| 6 | DHCP | Enable Dynamic Host Configuration Protocol (DHCP) on subnets to simplify client network configuration |
+| 7 | VLANs | Configure VLANs on the switches and router to provide for network isolation between sets of hosts on the same physical network |
+| 8 | Firewalls | Configure a Firewall to restrict network access according to administrative requirements |
+| 9 | Network Address Translation | Connect your virtual GNS3 topology to the Internet and configure Network Address Translation (NAT) on a router |
+| 10 | GRE and OSPF | Use a GRE tunnel and OSPF routing to connect a "remote" business office to a "headquarters" business network |
+| 11 | IPv6 | Configure a dual-stack network to support both IPv4 and IPv6 |
+| 12 | OpenFlow | Configure a routed network that uses Software-Defined Networking (SDN) over OpenFlow Layer 3 switches |
 
 ## Repository Structure
 
@@ -52,7 +52,7 @@ LabX-Topic/
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/[username]/Networking-Labs.git
+git clone https://github.com/[majortank]/Networking-Labs.git
 ```
 
 2. Install GNS3 by following the instructions in Lab 1
