@@ -27,8 +27,8 @@ In this lab, we will:
    - 1 MikroTik router
    - 1 Ethernet Switch
 3. Connect devices per diagram:
-   - PC1 → Switch → Router (Ether1)
-   - PC2 → Switch → Router (Ether2)
+   - PC1 → Router (Ether1) → Switch (Ethernet0)
+   - PC2 → Switch (Ethernet0) → Router (Ether2)
 4. Start all devices
 5. Open consoles for PCs and router
 
