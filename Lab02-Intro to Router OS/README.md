@@ -7,6 +7,16 @@ In this lab, we will:
 - Analyze network traffic using Wireshark
 - Configure and test network connectivity between subnets
 
+## Network Diagram
+```
+[PC1]                        [PC2]
+192.168.50.10               192.168.60.10
+     |                           |
+     |                           |
+[Ethernet Switch]---------------[Router]
+                          .1 /        \ .1
+                 192.168.50.0/24  192.168.60.0/24
+```
 ## Network Requirements
 
 ### Subnet 1 (192.168.50.0/24)
@@ -22,17 +32,29 @@ In this lab, we will:
 
 ### 1. Network Setup
 1. Create new project named "lab02"
-2. Add components:
+
+2. Add required components:
    - 2 Virtual PCs (VPCS)
    - 1 MikroTik router
    - 1 Ethernet Switch
-3. Connect devices per diagram:
-   - PC1 → Router (Ether1) → Switch (Ethernet0)
-   - PC2 → Switch (Ethernet0) → Router (Ether2)
-4. Start all devices
-5. Open consoles for PCs and router
+  
+   ![Add Components](screenshots/lab02/Add_components.jpg)
+
+3. Connect devices according to the diagram:
+
+   ![Connect Devices](screenshots/lab02/Connect_devices_per_diagram.jpg)
+
+5. Start all devices:
+
+   ![Start Devices](screenshots/lab02/Start_all_devices.jpg)
+
+7. Open consoles for PCs and router:
+
+   ![Open Consoles](screenshots/lab02/Open_consoles_for_PCs_and_router.jpg)
 
 ### 2. Router Configuration
+
+![Router Configuration](screenshots/lab02/Router_Configuration.jpg)
 ```
 # Login
 Username: admin
@@ -57,6 +79,8 @@ system identity print
 ```
 
 ### 3. PC1 Configuration
+
+![PC1 Configuration](screenshots/lab02/PC1_Configuration.jpg)
 ```
 # Configure IP and gateway
 ip 192.168.50.10/24 192.168.50.1
@@ -65,6 +89,8 @@ save
 ```
 
 ### 4. PC2 Configuration
+
+![PC2 Configuration](screenshots/lab02/PC2_Configuration.jpg)
 ```
 # Configure IP and gateway
 ip 192.168.60.10/24 192.168.60.1
@@ -73,6 +99,8 @@ save
 ```
 
 ### 5. Testing Connectivity
+
+![Testing Connectivity](screenshots/lab02/Testing_Connectivity_From_PC1.jpg)
 From PC1:
 ```
 # Test local router interface
@@ -89,16 +117,22 @@ ping 192.168.60.10
 
 ### Command Investigation
 1. Test the help system:
+
+   ![Help System](screenshots/lab02/Test_the_help_system.jpg)
    - Enter `?`
    - Enter `system clock ?`
    
-2. Clock configuration:
+3. Clock configuration:
+
+   ![Clock Configuration](screenshots/lab02/Clock_configuration.jpg)
    ```
    system clock set time=HH:MM:SS date=mon/dd/yyyy
    system clock print
    ```
 
-3. Interface information:
+5. Interface information:
+
+   ![Interface Information](screenshots/lab02/Interface_information.jpg)
    ```
    interface ethernet print
    ```
@@ -132,11 +166,6 @@ ping 192.168.60.10
 ### Stopping Capture
 Right-click the link and select "Stop Capture" when finished
 
-## Lab Submission Requirements
-1. Document answers to all RouterOS exploration tasks
-2. Document answers to all Wireshark analysis questions
-3. Submit documentation to Canvas lab assignment
-
 ## Tips
 - Always use Show/Hide Interface Labels button for better topology visibility
 - Configure router before PCs as it serves as the gateway
@@ -154,14 +183,3 @@ Right-click the link and select "Stop Capture" when finished
 - Ensure router interfaces are enabled
 - Confirm gateway addresses on PCs match router interface IPs
 - If no connectivity between subnets, verify router routing table with `ip route print`
-
-## Network Diagram
-```
-[PC1]                        [PC2]
-192.168.50.10               192.168.60.10
-     |                           |
-     |                           |
-[Ethernet Switch]---------------[Router]
-                          .1 /        \ .1
-                 192.168.50.0/24  192.168.60.0/24
-```
